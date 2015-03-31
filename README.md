@@ -10,9 +10,10 @@ App android requet nodejs
 - Executer l'application.
 - Allez sur la page http://localhost:1234
 - Amusez vous avec le switch !
-    Switch ON: envoie une requête toute les minutes.
+    Switch ON: envoie une requête toutes les minutes.
     Switch OFF: N'envoie rien.
     
-# Modification à venir
-socket.connect avec le Switch ON.
-socket.disconnect avec le Switch OFF.
+# Modifications à venir
+- socket.connect avec le Switch ON.
+- socket.disconnect avec le Switch OFF.
+- Demande de décompte sur le site.

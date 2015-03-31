@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Index OK</title>
+	</head>
+
+	<body>
+		<h1>Bonjour,</h1>
+		<p>La connection est actuellement : </p>
+		<p id="etat"/>
+		<p><input type="button" value="Depuis combien de temps ?" id="time" /></p>
+
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<script>
+			var socket = io.connect('http://localhost:1234');
+			
+			socket.emit('who', "Dieu");
+
+			socket.on('etat', function(etat){
+				document.getElementById("etat").innerHTML = etat;
+			})
+
+			$('#time').click(function () {
+                socket.emit('test');
+            })
+		</script>
+	</body>
+</html>

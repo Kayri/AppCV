@@ -12,9 +12,10 @@ var io = require('socket.io').listen(server);
 
 io.sockets.on('connection', function(socket){
 
-	socket.on('time', function() {
-        console.log(socket.name + ' me demande le temps');
-    });	
+	/*socket.on('time', function() {
+        console.log(socket.name + " me demande le temps qu'il reste");
+        // décompte
+     });	*/
 
     socket.on('message', function(message) {
         console.log(socket.name +' - message :'+ message);
